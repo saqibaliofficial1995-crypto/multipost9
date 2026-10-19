@@ -200,6 +200,15 @@ def validate_metadata(meta):
     if len(tags_joined) >= 460:
         raise ValueError(f"Tags string length {len(tags_joined)} exceeds 460 characters.")
 
+    # Description check and formatting: ensure lines are joined with clean spacing
+    desc = meta.get("description", "")
+    if isinstance(desc, list):
+        lines = [str(d).strip() for d in desc if d]
+        meta["description"] = "\n\n".join(lines)
+    elif isinstance(desc, str):
+        lines = [line.strip() for line in desc.splitlines() if line.strip()]
+        meta["description"] = "\n\n".join(lines)
+
     # Hashtags check: exactly 3
     hashtags = meta.get("hashtags", [])
     if not isinstance(hashtags, list) or len(hashtags) != 3:
@@ -377,7 +386,7 @@ Required JSON structure:
         topic = final_meta.get("inferred_topic", "General Entertainment")
         title = final_meta.get("title", "")
         desc = final_meta.get("description", "")
-        hook = "\n".join([line for line in desc.splitlines() if line.strip()][:2])
+        hook = " ".join([line for line in desc.splitlines() if line.strip()][:2])
         tags = final_meta.get("tags", [])
         hashtags = final_meta.get("hashtags", [])
 
