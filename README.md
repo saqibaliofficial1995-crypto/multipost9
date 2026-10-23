@@ -6,8 +6,8 @@ Fully cloud-based, autonomous YouTube upload pipeline and engagement system runn
 - **Channel Name:** Kristin Marin
 - **Channel ID:** `UCddVQFPVaoey0we1vXHEqvg`
 - **Google Account:** `khanmuhammadarsalan911@gmail.com`
-- **GitHub Username:** `khanmuhammadarsalan911-hash`
-- **Repository:** `khanmuhammadarsalan911-hash/multipost9` (Private)
+- **GitHub Username:** `saqibaliofficial1995-crypto`
+- **Repository:** `saqibaliofficial1995-crypto/multipost9` (Public)
 - **Drive Inbox Folder ID:** `1xbYGkaG8Cg8-IrYXFh4ooj6JYiZYvDAX` (453 inbox videos)
 - **Drive Uploaded Folder ID:** `1E_NiUNd_1IsAGuIHJoB4XijalnTKEWgc`
 - **Architecture:** Single-Token Architecture (`token.json` holds all 5 scopes)
